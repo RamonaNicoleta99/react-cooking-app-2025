@@ -43,6 +43,11 @@ export default function MealsContainer() {
           mealData.map((meal) => (
             <MealComponent title={meal.title} area={meal.area} />
           ))}
+        {mealData.length == 0 && (
+          <div className="col-span-3 flex items-center justify-center p-6">
+            No meals found
+          </div>
+        )}
       </div>
     </div>
   );
